@@ -1,0 +1,10 @@
+https://bitwarden.com/help/cli/#download-and-install
+chown root: bw
+chmod 755 bw
+mv bw /usr/bin
+export BW_CLIENTID=""
+export BW_CLIENTSECRET=""
+BW_PASSWORD=""
+bw login --apikey
+bw unlock $BW_PASSWORD
+bw export --output save/path --format encrypted_json --password $BW_PASSWORD
